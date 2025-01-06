@@ -79,3 +79,4 @@ Example Response:
 
 1. (Bonus) Discuss or implement error handling and arguments validations for the events query.
 2. (Bonus) Write a query event to fetch a specific event by its id.
+3. (Bonus) Write (or discuss) mutations about adding, editing and deleting events.
