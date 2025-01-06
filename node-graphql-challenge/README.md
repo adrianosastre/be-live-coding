@@ -99,6 +99,9 @@ Example Response:
 }
 ```
 
-4. (Bonus) Discuss or implement error handling and arguments validations for the events query.
-5. (Bonus) Write a query event to fetch a specific event by its id.
-6. (Bonus) Write (or discuss) mutations about adding, editing and deleting events.
+Bonus sections:
+
+4. Discuss or implement error handling and arguments validations for the events query.
+5. Write a query event to fetch a specific event by its id.
+6. Write (or discuss) mutations about adding, editing and deleting events.
+7. Discuss about possible new entities to be joined with events; e.g. users that can be event attendees or organizers.
