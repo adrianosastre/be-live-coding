@@ -14,7 +14,7 @@
 
 # How-to
 
-The live coding can be done on `Visual Studio Code` with the `Live Sharing` extension.
+The live coding can be done with screen sharing.
 
 ## Notes and Assumptions
 
