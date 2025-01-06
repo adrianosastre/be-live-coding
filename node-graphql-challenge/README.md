@@ -22,21 +22,45 @@ The live coding can be done with screen sharing.
 - Focus on meeting functional requirements first.
 - Add error handling and validation if time permits.
 - Feel free to ask clarifying questions during the interview.
+- The project is already working with the following query and results:
+```graphql
+query {
+  events {
+   id
+   name
+   type
+  }
+}
+```
+Example Response with all events:
+```json
+{
+  "data": {
+    "events": [
+      { "id": 1, "name": "Event A", "type": "Conference" },
+      { "id": 3, "name": "Event C", "type": "Conference" },
+      ...
+   ]
+  }
+}
+```
 
 # Node / GraphQL challenge
 
-Define a GraphQL schema with:
+Refactor the GraphQL schema with:
 
-1. A query `events` that accepts:
+1. The query `events` has the following required and optional arguments:
 - page: Int (required)
 - pageSize: Int (required)
 - type: String (optional)
 
-2. A return type containing:
+2. Update the return type containing:
 - total: Int
+- page: Int
+- pageSize: Int
 - events: A list of event objects (id, name, type).
 
-3. Write a resolver for the `events` query that:
+3. Update the resolver for the `events` query to:
 
 - Uses the provided mock data in .ts file.
 - Filters events by type if provided.
@@ -77,6 +101,6 @@ Example Response:
 }
 ```
 
-1. (Bonus) Discuss or implement error handling and arguments validations for the events query.
-2. (Bonus) Write a query event to fetch a specific event by its id.
-3. (Bonus) Write (or discuss) mutations about adding, editing and deleting events.
+4. (Bonus) Discuss or implement error handling and arguments validations for the events query.
+5. (Bonus) Write a query event to fetch a specific event by its id.
+6. (Bonus) Write (or discuss) mutations about adding, editing and deleting events.
