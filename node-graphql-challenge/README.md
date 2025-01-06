@@ -12,8 +12,6 @@
    ```bash
    npm install
 
-# How-to
-
 The live coding can be done with screen sharing.
 
 ## Notes and Assumptions
