@@ -1,6 +1,7 @@
 # GraphQL Challenge - Node (TypeScript)
 
 The live coding can be done with screen sharing.
+Feel free to ask clarifying questions during the interview.
 
 ## Setup Instructions
 
@@ -16,10 +17,9 @@ The live coding can be done with screen sharing.
 
 ## Notes and Assumptions
 
-- The `events` data source is in memory (e.g., an array of objects in .ts file).
+- The `events` data source is in memory (an array of objects in .ts file).
 - Focus on meeting functional requirements first.
 - Add error handling and validation if time permits.
-- Feel free to ask clarifying questions during the interview.
 
 The project is already working, using the provided mock data, with the following query and results:
 ```graphql
@@ -36,10 +36,13 @@ Example response with all events:
 {
   "data": {
     "events": [
-      { "id": 1, "name": "Event A", "type": "Conference" },
-      { "id": 3, "name": "Event C", "type": "Conference" },
-      ...
-   ]
+      { "id": "1", "name": "Tech Conference 2024", "type": "Exhibition" },
+      { "id": "2", "name": "Event B", "type": "Workshop" },
+      { "id": "3", "name": "Event C", "type": "Conference" },
+      { "id": "4", "name": "Startup Meetup", "type": "Corporate" },
+      { "id": "5", "name": "AI Summit", "type": "Exhibition" },
+      { "id": "6", "name": "Event F", "type": "Conference" }
+    ]
   }
 }
 ```
