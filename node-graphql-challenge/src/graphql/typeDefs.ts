@@ -7,8 +7,21 @@ export const typeDefs = gql`
     type: String!
   }
 
-  type Query {
-    events(page: Int, pageSize: Int, type: String): [Event!]!
+  type EventsResult {
+    total: Int!
+    page: Int!
+    pageSize: Int!
+    events: [Event!]!
   }
 
+  type Query {
+    events(page: Int!, pageSize: Int!, type: String): EventsResult!
+    event(id: Int): Event!
+  }
+
+  type Mutation {
+    addEvent(name: String!, type: String!): Event
+    updateEvent(id: ID! name: String, type: String): Event
+    deleteEvent(id: ID!): Event
+  }
 `;
