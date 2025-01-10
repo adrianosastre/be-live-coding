@@ -111,3 +111,29 @@ Bonus sections:
 6. Write a query event to fetch a specific event by its id.
 7. Write (or discuss) mutations about adding, editing and deleting events.
 8. Discuss about possible new entities to be joined with events; e.g. users that can be event attendees or organizers.
+
+```sql
+CREATE TABLE user (
+    id SERIAL PRIMARY KEY,
+    firstname VARCHAR(255) NOT NULL, 
+    lastname VARCHAR(255) NOT NULL,
+    email VARCHAR(255) UNIQUE NOT NULL
+);
+
+CREATE TABLE event (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    type VARCHAR(255) NOT NULL CHECK (type IN ('exhibition', 'conference', 'congress'))
+);
+
+CREATE TABLE event_profile (
+    id SERIAL PRIMARY KEY,
+    event_id INT NOT NULL,
+    user_id INT NOT NULL,
+    CONSTRAINT fk_event FOREIGN KEY (event_id) REFERENCES event(id) ON DELETE CASCADE,
+    CONSTRAINT fk_user FOREIGN KEY (user_id) REFERENCES user(id) ON DELETE CASCADE
+);
+```
+
+9. Write a query to retrieve all users who are registered for an event called "Tech Conference".
+10. How would you find all events in which a user with the email alice@example.com is participating?
